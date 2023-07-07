@@ -1,30 +1,23 @@
-# IMAGE RECOGNITION
+# IMAGE RECOGNITION WEBSITE
 
-This is a project I will make during summer. The intent of this project is to learn how to make a website and using predefined AI models.
+This is a freetime project I will make during summer. The intent of this project is to learn how to make a website and using predefined AI models, in preparation for future courses.
 
 The main idea of this project is to create a website where users are able to
 upload a picture and a AI model will classify the image. As this is the first version it will be updated along the way when new ideas and features come to mind.
 
-## Features
-Uploading pictures to website.
-What percentage of certainty that the AI model can classify the image as.
+## Program specifications and languages
+
+The server-side of the website will be programmed using JavaScript with Node.js as the runtime enviroment including Express as the framework.
+
+The client side will be programmed using JavaScript, HTML and CSS.
+
+A relational database will be implemented, as of yet which version has not been decided upon, SQLite is considered to be used.
+
+### Features
+Upload an image to the website.
+Image classification of uploaded pictures to the website.
 
 More features to come.
 
-
-## Workflow idea
-
-Divide the problem into two main parts. Eventually integrate the AI to the website and run the pictures in the model.
-
-### AI PART
-
-**1.** Learn about AI and what models to use. I have used this website to read about image classification and what to use for this project. https://learn.microsoft.com/en-us/dotnet/machine-learning/tutorials/image-classification#prerequisites. Divide the project into two parts, website and AI.
-
-**2.** Test to setup and run the AI model as a simple project. 
-
-### WEBSITE PART
-
-
-**1.** Read and learn about how to create and setup a website.
-
-**2.** Create the website
+## Kanban board
+Click [here] (https://github.com/users/simondereuver/projects/3) to view the Kanban board of the project.
