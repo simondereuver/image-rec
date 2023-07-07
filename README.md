@@ -20,4 +20,4 @@ Image classification of uploaded pictures to the website.
 More features to come.
 
 ## Kanban board
-Click [here] (https://github.com/users/simondereuver/projects/3) to view the Kanban board of the project.
+Click [here](https://github.com/users/simondereuver/projects/3) to view the Kanban board of the project.
