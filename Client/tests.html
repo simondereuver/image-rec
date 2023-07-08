@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="tests.css">
+        <!-- JavaScript to fetch the Top Navigation Bar from the topnavbar.html file -->
+        <!-- Maybe further implement the catch and error part of this code -->
+        <script>
+            fetch('topnavbar.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('topnavbar').innerHTML = data;
+                })
+                .catch(error => {
+                    console.error('Error fetching topnavbar.html: ', error);
+                });
+        </script>
+        
+    </head>
+    <body>
+        <!-- Add the content of the webpage, div and so on-->
+        
+        <!--Insert Navigation bar at top of website-->
+        <div id="topnavbar"></div>
+
+        <h1>Testing to implement things.
+            <p>This part of the webpage will be used for testing different things as a learning outcome and
+                some of the things implemented here might be moved over to the "Fun Stuff" page 
+                if successfully implemented.
+            </p>
+        </h1>
+
+        
+    </body>
+</html>
