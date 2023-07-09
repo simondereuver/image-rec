@@ -1,18 +1,26 @@
 body {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    background-color: purple;
-    margin: 10;
-    padding: 14;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: lavender;
+    margin: 0;
+    padding: 0;
 }
 
 h1 {
     color: black;
-    font-size: 15;
-    margin: 10px;
+    font-size: 12;
 }
 
-p {
+.aboutpgh {
+    font-size: 10;
+    color: grey;
+}
+
+h2 {
     color: black;
     font-size: 10;
-    margin: 10px;
+}
+
+.contactpgh {
+    color: black;
+    font-size: 10;
 }
