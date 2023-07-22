@@ -3,7 +3,7 @@
     <head>
         <link rel="stylesheet" href="funstuff.css">
         <!-- JavaScript to fetch the Top Navigation Bar from the topnavbar.html file -->
-        <!-- Maybe further implement the catch and error part of this code -->
+        <!-- Placed in head section allows the script to be loaded and parsed early in the page's rendering process -->
         <script>
             fetch('topnavbar.html')
                 .then(response => response.text())
@@ -29,5 +29,16 @@
         <p id="funphg">This page is for implementing fun features to interact with on this webpage
             and is also serving as a learning experience for me as a developer.
         </p>
+
+        <button id="htmlButton">"Click for a quote!"</button>
+        <div id="random-quote" class="box"></div>
+        <script src="randomQuoteModule.js"></script>
+        <script>
+            const jsButton = document.getElementById('htmlButton');
+            const quoteTextElement = document.getElementById('random-quote');
+            jsButton.addEventListener('click', () => {
+                fetchRandomQuote(quoteTextElement);
+            })
+        </script>
     </body>
 </html>

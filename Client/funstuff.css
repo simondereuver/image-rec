@@ -22,3 +22,10 @@ h2 {
     font-size: 5px;
     text-align: left;
 }
+
+.box {
+    width: 1200px;
+    height: 500px;
+    border: 2px solid black;
+    padding: 20px;
+}
