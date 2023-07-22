@@ -2,7 +2,7 @@
   "name": "server",
   "version": "1.0.0",
   "description": "Initial package file",
-  "main": "index.js",
+  "main": "server.js",
   "dependencies": {
     "express": "^4.18.2"
   },
