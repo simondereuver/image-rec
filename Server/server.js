@@ -3,16 +3,15 @@ const path = require('path');
 const http = require('http');
 const fs = require('fs');
 const express = require('express');
+//const cors = require('cors');
 
 //Create instance of express application
 const app = express();
 
-app.get('/', (req, res) => {
-    res.send('Hello, world!');
-});
-
 //Give access to client-side files
 app.use(express.static(path.join(__dirname, '../Client')));
+
+//app.use(cors());
 
 //Used to fetch the topnavbar into the different pages of website
 app.get('/topnavbar.html', (req, res) => {
@@ -33,12 +32,17 @@ app.get('/api/random-quote', (req, res) => {
         const randomIndex = Math.floor(Math.random() * randomQuotes.length);
         const randomQuote = randomQuotes[randomIndex].trim();
 
+        console.log('***');
+        console.log(randomQuote);
+        console.log('***');
+
         res.json({ text: randomQuote});
     });
 });
 
 //Start server and listen to port 1337
 const port = 1337;
-app.listen(port, () => {
-    console.log('Server is listening on port 1337');
+app.listen(port,/* '192.168.1.11',*/ () => {
+    //console.log('Server is running at http://192.168.1.11:${port}');
+    console.log('Server is running at localhost:${port}');
 });
