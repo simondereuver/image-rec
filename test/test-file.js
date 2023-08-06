@@ -25,7 +25,6 @@ describe('Random Quote API', () => {
         });
     });
 
-    // Your test cases go here...
     it('should return a random quote', (done) => {
         chai.request(app)
             .get('/api/random-quote')
