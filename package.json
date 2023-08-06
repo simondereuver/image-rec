@@ -1,0 +1,26 @@
+{
+  "name": "image-rec-proj",
+  "version": "1.0.0",
+  "description": "Initial package file",
+  "dependencies": {
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "chai": "^4.3.7",
+    "mocha": "^10.2.0",
+    "nyc": "^15.1.0"
+  },
+  "scripts": {
+    "start": "node server.js",
+    "test": "mocha && nyc report --reporter=text-lcov > coverage.lcov && nyc report --reporter=html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/simondereuver/image-rec.git"
+  },
+  "author": "Simon de Reuver",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/simondereuver/image-rec/issues"
+  },
+  "homepage": "https://github.com/simondereuver/image-rec#readme"
