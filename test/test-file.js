@@ -1,26 +1,31 @@
 // test/test-file.js
 const chai = require('chai');
 const chaiHttp = require('chai-http');
-const { app, server } = require('../Server/server');
+const app = require('../Server/server');
 
-// Configure Chai to use the chai-http plugin
 chai.use(chaiHttp);
 const expect = chai.expect;
 
 describe('Random Quote API', () => {
+    let server; // Declare the server variable
+
     before((done) => {
-        // The server is started in the server.js file, no need to start it again here
-        done();
+        // Start the server before running the tests
+        server = app.listen(3000, () => {
+            console.log('Server is listening on port 3000');
+            done();
+        });
     });
 
     after((done) => {
-        // Close the server after the tests are completed
-        app.close(() => {
+        // Stop the server after the tests are completed
+        server.close(() => {
             console.log('Server is closed');
             done();
         });
     });
 
+    // Your test cases go here...
     it('should return a random quote', (done) => {
         chai.request(app)
             .get('/api/random-quote')
