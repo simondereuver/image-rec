@@ -19,30 +19,34 @@ app.get('/topnavbar.html', (req, res) => {
     res.sendFile('C:/work/image-rec-proj/Client/topnavbar.html');
 });
 
-//API endpoint for a random quote
+let randomQuotes = [];
+
+// Read the "random-quotes.txt" file and store quotes in memory during server startup
+fs.readFile('./Server/random-quotes.txt', 'utf8', (error, data) => {
+    if (error) {
+        console.log('Error reading file:', error);
+        return;
+    }
+    const randomQuotesDocument = data.toString();
+    randomQuotes = randomQuotesDocument.split('\n').map(quote => quote.trim());
+});
+
+// API endpoint for a random quote
 app.get('/api/random-quote', (req, res) => {
-    fs.readFile('./random-quotes.txt', 'utf8', (error, data) => {
-        if (error) {
-            //console.log(error);
-            res.status(500).json({ error: 'Internal Server Error'});
-            return;
-        }
-        const randomQuotesDocument = data.toString();
-        const randomQuotes = randomQuotesDocument.split('\n'); //splits the text in document into substrings and each substring is an element in randomQuotes variable
-        const randomIndex = Math.floor(Math.random() * randomQuotes.length);
-        const randomQuote = randomQuotes[randomIndex].trim();
-
-        console.log('***');
-        console.log(randomQuote);
-        console.log('***');
-
-        res.json({ text: randomQuote});
-    });
+    const randomIndex = Math.floor(Math.random() * randomQuotes.length);
+    const randomQuote = randomQuotes[randomIndex];
+    res.json({ text: randomQuote });
 });
 
-//Start server and listen to port 1337
-const port = 1337;
-app.listen(port,/* '192.168.1.11',*/ () => {
-    //console.log('Server is running at http://192.168.1.11:${port}');
-    console.log('Server is running at localhost:${port}');
+
+const port = 3000; // or the port number you want to use
+const server = app.listen(port, () => {
+    console.log(`Server is listening on port ${port}`);
 });
+
+app.close = (callback) => {
+    console.log('Custom close function is running');
+    server.close(callback);
+};
+
+module.exports = { app, server }; // Export the 'app' variable for unit-tests
