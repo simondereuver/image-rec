@@ -7,11 +7,42 @@ upload a picture and a AI model will classify the image. As this is the first ve
 
 ## Program specifications and languages
 
-The server-side of the website will be programmed using JavaScript with Node.js as the runtime enviroment including Express as the framework.
+#### Server-side
+The server-side of the website will be programmed using JavaScript with Node.js as the runtime enviroment including Express as the application framework.
 
-The client side will be programmed using JavaScript, HTML and CSS.
+#### Testing
+Frameworks used for unit tests are Mocha, chai, chai-http, supertest and nyc (previously Istanbul) is used for codecoverage.
 
-A relational database will be implemented, as of yet which version has not been decided upon, SQLite is considered to be used.
+#### Client-side
+The client side is programmed using JavaScript, HTML and CSS.
+
+#### Database
+SQLite is used for database implementation.
+
+## Compiling and running instructions
+Make sure you have [Node.js](https://nodejs.org/) installed. To install the dependencies needed enter the following lines in the project root folder after Node.js has been properly installed.
+
+Dependencies:
+``` 
+npm install express
+``` 
+devDependencies:
+``` 
+npm install chai chai-http mocha nyc supertest --save-dev
+``` 
+Database:
+``` 
+npm install sqlite3
+``` 
+
+To start the project go to the root folder of project and enter the following into the commandline:
+``` 
+node index.js
+``` 
+The server will now be up and running.
+
+To visit it enter http://localhost:3000/index.html into your choice of web browser such as Google Chrome, this will take you to the Home-page of the website.
+
 
 ### Features
 Upload an image to the website.
