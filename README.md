@@ -11,7 +11,7 @@ upload a picture and a AI model will classify the image. As this is the first ve
 The server-side of the website will be programmed using JavaScript with Node.js as the runtime enviroment including Express as the application framework.
 
 #### Testing
-Frameworks used for unit tests are Mocha, chai, chai-http, supertest and nyc (previously Istanbul) is used for codecoverage.
+Framework used for unit tests are Mocha alongside with testing libraries chai, chai-http, supertest and nyc (previously Istanbul) is used for codecoverage.
 
 #### Client-side
 The client side is programmed using JavaScript, HTML and CSS.
