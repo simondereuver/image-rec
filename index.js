@@ -1,4 +1,4 @@
-const { app, server } = require('./Server/server'); // Import the app and server from server.js
+const app = require('./Server/server'); // Import the app and server from server.js
 
 const port = 3000; // or the port number you want to use
 app.listen(port, () => {
