@@ -14,14 +14,13 @@
     "eslint-plugin-node": "^11.1.0",
     "htmlhint": "^1.1.4",
     "mocha": "^10.2.0",
-    "nyc": "^15.1.0",
     "stylelint": "^15.10.2",
     "stylelint-config-standard": "^34.0.0",
     "supertest": "^6.3.3"
   },
   "scripts": {
     "start": "node index.js",
-    "test": "mocha && nyc report --reporter=text-lcov > coverage.lcov && nyc report --reporter=html",
+    "test": "mocha",
     "lint-server": "eslint Server/server.js --config lint-config/.eslintrc.js",
     "lint-client": "eslint Client/index.js --config lint-config/.eslintrc.js",
     "lint-test": "eslint test --config lint-config/.eslintrc.test.js",
