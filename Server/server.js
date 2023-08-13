@@ -1,6 +1,5 @@
 //Imports
 const path = require('path');
-const http = require('http');
 const fs = require('fs');
 const express = require('express');
 
@@ -12,7 +11,7 @@ app.use(express.static(path.join(__dirname, '../Client')));
 
 //Used to fetch the topnavbar into the different pages of website
 app.get('/topnavbar.html', (req, res) => {
-    const filePath = path.join(__dirname, '../Client/topnavbar.html');
+    //const filePath = path.join(__dirname, '../Client/topnavbar.html');
     res.sendFile('C:/work/image-rec-proj/Client/topnavbar.html');
 });
 
