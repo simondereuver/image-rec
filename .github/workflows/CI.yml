@@ -6,7 +6,41 @@ on:
       - main
 
 jobs:
-  build-test:
+  Server:
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Debug Environment
+        run: |
+          pwd
+          ls -al
+          node -v
+          npm -v
+          echo $GITHUB_WORKSPACE
+
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '18'
+
+      - name: Install dependencies
+        run: npm ci
+      
+      - name: Run ESLint Server
+        run: npm run lint-server
+
+      - name: Run ESLint Tests
+        run: npm run lint-test
+
+      - name: Run Mocha Tests
+        run: npm test
+
+  Client:
+
     runs-on: ubuntu-latest
 
     steps:
@@ -29,12 +63,22 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Run ESLint
-        run: npm run lint
+      - name: Run ESLint Client
+        run: npm run lint-client
 
-      - name: Run Mocha Tests
-        run: npm test
+      - name: Run ESLint Tests
+        run: npm run lint-test
 
+      - name: Run HTMLHINT lint
+        run: npm run lint-html
+
+      - name: Run Stylelint CSS
+        run: npm run lint-css
+
+      - name: Run ESLint Tests
+        run: npm run lint-test
+
+  Push:
       - name: Push Changes
         run: git push
         if: ${{ success() && steps.run-eslint.outcome == 'success' && steps.run-tests.outcome == 'success' }}
