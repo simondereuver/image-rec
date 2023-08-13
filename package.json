@@ -22,8 +22,8 @@
   "scripts": {
     "start": "node index.js",
     "test": "mocha && nyc report --reporter=text-lcov > coverage.lcov && nyc report --reporter=html",
-    "lint-server": "eslint server --config lint-config/.eslintrc.js",
-    "lint-client": "eslint client --config lint-config/.eslintrc.js",
+    "lint-server": "eslint Server/server.js --config lint-config/.eslintrc.js",
+    "lint-client": "eslint Client/index.js --config lint-config/.eslintrc.js",
     "lint-test": "eslint test --config lint-config/.eslintrc.test.js",
     "lint-css": "stylelint \"Client/**/*.css\" --config lint-config/.stylelintrc.js",
     "lint-html": "htmlhint \"Client/**/*.html\" --config lint-config/.htmlhintrc",
