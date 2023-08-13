@@ -20,29 +20,21 @@ The client side is programmed using JavaScript, HTML and CSS.
 SQLite is used for database implementation.
 
 ## Compiling and running instructions
-Make sure you have [Node.js](https://nodejs.org/) installed. To install the dependencies needed enter the following lines in the project root folder after Node.js has been properly installed.
+Create a directory for where you want the project to reside and enter ```git remote add origin git+https://github.com/simondereuver/image-rec.git``` into the commandline while at the directory. Before installing dependencies and mor make sure you have [Node.js](https://nodejs.org/) installed.
 
-Dependencies:
+To install Dependencies, devDependencies and SQLite simply run:
 ``` 
-npm install express
+npm install
 ``` 
-devDependencies:
-``` 
-npm install chai chai-http mocha nyc supertest --save-dev
-``` 
-Database:
-``` 
-npm install sqlite3
-``` 
+This will install everything you need to be able to run the web-application and creates a node_modules/ directory within the root direcory of the project.
 
-To start the project go to the root folder of project and enter the following into the commandline:
+To start the project go to the root directory of project and enter the following into the commandline:
 ``` 
 node index.js
 ``` 
 The server will now be up and running.
 
 To visit it enter http://localhost:3000/index.html into your choice of web browser such as Google Chrome, this will take you to the Home-page of the website.
-
 
 ### Features
 Upload an image to the website.
