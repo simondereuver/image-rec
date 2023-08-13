@@ -79,6 +79,10 @@ jobs:
         run: npm run lint-test
 
   Push:
+    runs-on: ubuntu-latest
+
+    steps:
+
       - name: Push Changes
         run: git push
         if: ${{ success() && steps.run-eslint.outcome == 'success' && steps.run-tests.outcome == 'success' }}
