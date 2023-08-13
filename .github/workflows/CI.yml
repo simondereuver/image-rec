@@ -10,13 +10,21 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: Debug Environment
+        run: |
+          pwd
+          ls -al
+          node -v
+          npm -v
+          echo $GITHUB_WORKSPACE
+
       - name: Checkout repository
         uses: actions/checkout@v2
 
       - name: Setup Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: '14'
+          node-version: '18'
 
       - name: Install dependencies
         run: npm ci
