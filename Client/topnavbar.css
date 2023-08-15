@@ -1,27 +1,27 @@
-/* Top Navigation Bar background color*/
+/* Top Navigation Bar background color */
 .topnavbar {
     background-color: #333;
     overflow: hidden;
 }
 
-/* Top Navigation Bar background color*/
+/* Top Navigation Bar background color */
 .topnavbar a {
     float: center;
-    color: rgb(252, 252, 252);
+    color: white;
     text-align: right;
     padding: 14px 16 px;
     text-decoration: none;
     font-size: 24px;
 }
 
-/* Top Navigation Bar hover link color*/
+/* Top Navigation Bar hover link color */
 .topnavbar a:hover {
     background-color: darkgray;
     color: black;
 }
 
-/* Top Navigation Bar current link color*/
+/* Top Navigation Bar current link color */
 .topnavbar a.active {
-    background-color: rgb(133, 133, 133);
+    background-color: grey;
     color: white;
 }
