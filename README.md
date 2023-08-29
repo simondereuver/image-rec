@@ -30,7 +30,7 @@ This will install everything you need to be able to run the web-application and 
 
 To start the project go to the root directory of project and enter the following into the commandline:
 ``` 
-node index.js
+node server.js
 ``` 
 The server will now be up and running.
 
